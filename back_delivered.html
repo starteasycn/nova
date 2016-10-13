@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <title>H+ 后台主题UI框架 - 空白页</title>
+    <meta name="keywords" content="H+后台主题,后台bootstrap框架,会员中心主题,后台HTML,响应式后台">
+    <meta name="description" content="H+是一个完全响应式，基于Bootstrap3最新版本开发的扁平化主题，她采用了主流的左右两栏式布局，使用了Html5+CSS3等现代技术">
+
+    <link rel="shortcut icon" href="favicon.ico" tppabs="http://www.zi-han.net/theme/hplus/favicon.ico"> <link href="css/bootstrap.min.css-v=3.3.5.css" tppabs="http://www.zi-han.net/theme/hplus/css/bootstrap.min.css?v=3.3.5" rel="stylesheet">
+    <link href="css/font-awesome.min.css-v=4.4.0.css" tppabs="http://www.zi-han.net/theme/hplus/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+
+    <link href="css/animate.min.css" tppabs="http://www.zi-han.net/theme/hplus/css/animate.min.css" rel="stylesheet">
+    <link href="css/style.min.css-v=4.0.0.css" tppabs="http://www.zi-han.net/theme/hplus/css/style.min.css?v=4.0.0" rel="stylesheet"><base target="_blank">
+    <style>
+        .tabUi{
+            display: inline-block;
+            text-align: right;
+            list-style: none !important;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .tabli {
+            margin: 0 0.5em;
+            float: left;
+            display: block;
+            padding: 0;
+            /*background: #1AB394;*/
+            background: #6fd1bd;
+            color: #fff;
+            display: block;
+            padding: 0.5em 1em;
+            text-decoration: none;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+        }
+        .tabliSelect{
+            margin: 0 0.5em;
+            float:left;
+            display: block;
+            padding: 0;
+            background: #1AB394;
+            /*background:#6fd1bd;*/
+            color: #fff;
+            display: block;
+            padding: 0.5em 1em;
+            text-decoration: none;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+        }
+
+    </style>
+    <script>
+        function changeSelect(obj){
+//            alert();
+            if(obj.className=="tabliSelect")
+                obj.className="tabli";
+            else
+                obj.className="tabliSelect";
+
+        }
+        function save(){
+            alert("保存成功");
+            return false;
+        }
+    </script>
+
+
+</head>
+
+<body class="gray-bg">
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-sm-4">
+            <h2>AR模型管理</h2>
+            <ol class="breadcrumb">
+                <li>
+                    <a href="index.html" tppabs="http://www.zi-han.net/theme/hplus/index.html">主页</a>
+                </li>
+                <li>
+                    <strong>World War III</strong>
+                </li>
+            </ol>
+        </div>
+
+    </div>
+    <div class="wrapper wrapper-content" >
+            <div class="clients-list">
+                <ul class="nav nav-tabs">
+
+                    <li class="active"><a data-toggle="tab" href="#tab-1"><i class="fa fa-briefcase"></i>Profile</a>
+                    </li>
+                    <li class=""><a data-toggle="tab" href="#tab-2"><i class="fa fa-briefcase"></i> Reference Photos</a>
+
+                    <li class=""><a data-toggle="tab" href="#tab-3"><i class="fa fa-briefcase"></i> Demands</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div id="tab-1" class="tab-pane active">
+                        <div class="full-height-scroll">
+                            <div class="ibox-content wizard">
+                                <form class="form-horizontal ">
+                                    <div class="form-group">
+                                        <label class="col-sm-1 control-label">Name：</label>
+                                        <div class="col-sm-10 control-label" style="text-align: left" > World War III</div>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-1 control-label">Categary：</label>
+                                        <div class="col-sm-10 control-label" style="text-align: left" >Character</div>
+
+                                    </div>
+
+                                    <div class="
+                                    form-group">
+                                        <label class="col-sm-1 control-label">time：</label>
+                                        <div class="col-sm-10 control-label" style="text-align: left" >2016-10-13</div>
+
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-1 control-label">publisher：</label>
+                                        <div class="col-sm-10 control-label" style="text-align: left" >
+                                            <img src="user_img/u1.png">
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="form-group">
+                                        <label class="col-sm-1 control-label">Tags：</label>
+
+                                        <div class="col-sm-10">
+                                            <ul class="tabUi">
+
+                                                <li class="tabliSelect" >Blizard</li>
+                                                <li class="tabliSelect" >game</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="form-group">
+                                        <label class="col-sm-1 control-label">format：</label>
+
+                                        <div class="col-sm-10">
+                                            <ul class="tabUi">
+
+                                                <li class="tabliSelect" onclick="changeSelect(this)">Max</li>
+                                                <li class="tabliSelect" onclick="changeSelect(this)">Maya</li>
+                                                <li class="tabliSelect" onclick="changeSelect(this)">Fbx</li>
+                                                <li class="tabliSelect" onclick="changeSelect(this)">Obj</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-1 control-label">Discription：</label>
+
+                                        <div class="col-sm-10"  style="padding-left: 20px">
+                                            <textarea type="text" placeholder="请输入项目需求描述" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <hr style="color: #008855"/>
+                                    <div class="row" style="padding: 5px;">
+                                        <div class="col-md-2" style="height: 200px;margin-left: 5px; margin-right: 5px;" >
+                                            <div><img src="user_img/u2.jpg" style="width: 180px;height: 180px"></div>
+                                        </div>
+                                        <div class="col-md-2" style="height: 140px;margin-left: 5px; margin-right: 5px;" >
+                                            <div><img src="user_img/u2.jpg" style="width: 180px;height: 180px"></div>
+                                        </div>
+                                        <div class="col-md-2" style="height: 140px;margin-left: 5px; margin-right: 5px;" >
+                                            <div><img src="user_img/u2.jpg" style="width: 180px;height: 180px"></div>
+                                        </div>
+                                        <div class="col-md-2" style="height: 140px;margin-left: 5px; margin-right: 5px;" >
+                                            <div><img src="user_img/u2.jpg" style="width: 180px;height: 180px"></div>
+                                        </div>
+
+
+
+
+                                    </div>
+                                    <hr style="color: #008855"/>
+
+
+                                    <div style="margin-top: 30px;margin-bottom: 30px;text-align: center">
+
+                                            <button class="btn btn-sm btn-primary  m-t-n-xs"  >Analyze</button>
+
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div class="col-sm-1">
+                                            <div><img src="user_img/u2.jpg" style="width: 80px;height: 80px"></div>
+                                            <div style="font-size: 9px;text-align: center;margin-top: 2px">liudehua</div>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <div><img src="user_img/u3.jpg" style="width: 80px;height: 80px"></div>
+                                            <div style="font-size: 9px;text-align: center;margin-top: 2px">zhangboshi</div>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <div><img src="user_img/u2.jpg" style="width: 80px;height: 80px"></div>
+                                            <div style="font-size: 9px;text-align: center;margin-top: 2px">liudehua</div>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <div><img src="user_img/u3.jpg" style="width: 80px;height: 80px"></div>
+                                            <div style="font-size: 9px;text-align: center;margin-top: 2px">zhangboshi</div>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <div><img src="user_img/u2.jpg" style="width: 80px;height: 80px"></div>
+                                            <div style="font-size: 9px;text-align: center;margin-top: 2px">liudehua</div>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <div><img src="user_img/u3.jpg" style="width: 80px;height: 80px"></div>
+                                            <div style="font-size: 9px;text-align: center;margin-top: 2px">zhangboshi</div>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <div><img src="user_img/u2.jpg" style="width: 80px;height: 80px"></div>
+                                            <div style="font-size: 9px;text-align: center;margin-top: 2px">liudehua</div>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <div><img src="user_img/u3.jpg" style="width: 80px;height: 80px"></div>
+                                            <div style="font-size: 9px;text-align: center;margin-top: 2px">zhangboshi</div>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <div><img src="user_img/u2.jpg" style="width: 80px;height: 80px"></div>
+                                            <div style="font-size: 9px;text-align: center;margin-top: 2px">liudehua</div>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <div><img src="user_img/u3.jpg" style="width: 80px;height: 80px"></div>
+                                            <div style="font-size: 9px;text-align: center;margin-top: 2px">zhangboshi</div>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <div><img src="user_img/u2.jpg" style="width: 80px;height: 80px"></div>
+                                            <div style="font-size: 9px;text-align: center;margin-top: 2px">liudehua</div>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <div><img src="user_img/u3.jpg" style="width: 80px;height: 80px"></div>
+                                            <div style="font-size: 9px;text-align: center;margin-top: 2px">zhangboshi</div>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <div><img src="user_img/u2.jpg" style="width: 80px;height: 80px"></div>
+                                            <div style="font-size: 9px;text-align: center;margin-top: 2px">liudehua</div>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <div><img src="user_img/u3.jpg" style="width: 80px;height: 80px"></div>
+                                            <div style="font-size: 9px;text-align: center;margin-top: 2px">zhangboshi</div>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <div><img src="user_img/u2.jpg" style="width: 80px;height: 80px"></div>
+                                            <div style="font-size: 9px;text-align: center;margin-top: 2px">liudehua</div>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <div><img src="user_img/u3.jpg" style="width: 80px;height: 80px"></div>
+                                            <div style="font-size: 9px;text-align: center;margin-top: 2px">zhangboshi</div>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <div><img src="user_img/u2.jpg" style="width: 80px;height: 80px"></div>
+                                            <div style="font-size: 9px;text-align: center;margin-top: 2px">liudehua</div>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <div><img src="user_img/u3.jpg" style="width: 80px;height: 80px"></div>
+                                            <div style="font-size: 9px;text-align: center;margin-top: 2px">zhangboshi</div>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <div><img src="user_img/u2.jpg" style="width: 80px;height: 80px"></div>
+                                            <div style="font-size: 9px;text-align: center;margin-top: 2px">liudehua</div>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <div><img src="user_img/u3.jpg" style="width: 80px;height: 80px"></div>
+                                            <div style="font-size: 9px;text-align: center;margin-top: 2px">zhangboshi</div>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <div><img src="user_img/u2.jpg" style="width: 80px;height: 80px"></div>
+                                            <div style="font-size: 9px;text-align: center;margin-top: 2px">liudehua</div>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <div><img src="user_img/u3.jpg" style="width: 80px;height: 80px"></div>
+                                            <div style="font-size: 9px;text-align: center;margin-top: 2px">zhangboshi</div>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <div><img src="user_img/u2.jpg" style="width: 80px;height: 80px"></div>
+                                            <div style="font-size: 9px;text-align: center;margin-top: 2px">liudehua</div>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <div><img src="user_img/u3.jpg" style="width: 80px;height: 80px"></div>
+                                            <div style="font-size: 9px;text-align: center;margin-top: 2px">zhangboshi</div>
+                                        </div>
+                                    </div>
+
+
+
+
+
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="tab-2" class="tab-pane">
+                        <div class="full-height-scroll">
+                            <div class="full-height-scroll">
+                                <div class="ibox-content wizard">
+                                    <form class="form-horizontal ">
+
+                                        <div class="row" >
+
+                                            <div class="col-md-3">
+                                                <div class="ibox float-e-margins"  style="border:1px solid #e7eaec">
+                                                    <div class="ibox-title">
+                                                        <span class="label label-info pull-right"></span>
+                                                        <h5>Reference Photos</h5>
+                                                    </div>
+                                                    <div class="ibox-content" >
+                                                        <h1 class="no-margins">Add new</h1>
+                                                        <div class="stat-percent font-bold text-info">
+                                                        </div>
+                                                        <small></small>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </form>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div id="tab-3" class="tab-pane">
+                        <div class="full-height-scroll">
+                            <div class="ibox-content wizard">
+                                <form class="form-horizontal ">
+                                    <div class="form-group">
+                                        <label class="col-sm-1 control-label">语言：</label>
+
+                                        <div class="col-sm-10">
+                                            <ul class="tabUi">
+
+                                                <li class="tabli" onclick="changeSelect(this)">java</li>
+                                                <li class="tabli" onclick="changeSelect(this)">c#</li>
+                                                <li class="tabli" onclick="changeSelect(this)">php</li>
+                                                <li class="tabli" onclick="changeSelect(this)">c++</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-1 control-label">数据库：</label>
+
+                                        <div class="col-sm-10">
+                                            <ul class="tabUi">
+
+                                                <li class="tabli" onclick="changeSelect(this)">oracle</li>
+                                                <li class="tabli" onclick="changeSelect(this)">mysql</li>
+                                                <li class="tabli" onclick="changeSelect(this)">SqlServer</li>
+                                                <li class="tabli" onclick="changeSelect(this)">db2</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-1 control-label">平台：</label>
+
+                                        <div class="col-sm-10">
+                                            <ul class="tabUi">
+
+                                                <li class="tabli" onclick="changeSelect(this)">pc</li>
+                                                <li class="tabli" onclick="changeSelect(this)">andriod</li>
+                                                <li class="tabli" onclick="changeSelect(this)">ios</li>
+                                                <li class="tabli" onclick="changeSelect(this)">微信</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="form-group" id="data_5">
+                                        <label class="col-sm-1 control-label">时间：</label>
+                                        <div class="col-sm-4 input-daterange input-group" id="datepicker" style="padding-left: 20px">
+                                            <input type="text" class="input-sm form-control" name="start" value="2014-11-11" />
+                                            <span class="input-group-addon">到</span>
+                                            <input type="text" class="input-sm form-control" name="end" value="2014-11-17" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-1 control-label">描述：</label>
+
+                                        <div class="col-sm-10"  style="padding-left: 20px">
+                                            <textarea type="text" placeholder="请输入项目需求描述" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group" style="margin-top: 30px">
+                                        <div class="col-sm-offset-3 col-sm-8">
+                                            <button class="btn btn-sm btn-primary  m-t-n-xs"  onclick="return save();"> 保&nbsp;&nbsp;&nbsp; 存</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+    </div>
+    <script src="js/jquery.min.js-v=2.1.4.js" tppabs="http://www.zi-han.net/theme/hplus/js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js-v=3.3.5.js" tppabs="http://www.zi-han.net/theme/hplus/js/bootstrap.min.js?v=3.3.5"></script>
+    <script src="js/content.min.js-v=1.0.0.js" tppabs="http://www.zi-han.net/theme/hplus/js/content.min.js?v=1.0.0"></script>
+    <script type="text/javascript" src="../../../tajs.qq.com/stats-sId=9051096.js" tppabs="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
+</body>
+
+</html>
