@@ -63,6 +63,10 @@
                 obj.className="tabliSelect";
 
         }
+        function save(){
+            alert("保存成功");
+            return false;
+        }
     </script>
 
 </head>
@@ -192,11 +196,16 @@
                                                 <div class="col-sm-10">
                                                     <ul class="tabUi">
 
-                                                        <li class="tabli">Max</li>
-                                                        <li class="tabli">Maya</li>
-                                                        <li class="tabli">Fbx</li>
-                                                        <li class="tabli">Obj</li>
+                                                        <li class="tabli" onclick="changeSelect(this)">Max</li>
+                                                        <li class="tabli" onclick="changeSelect(this)">Maya</li>
+                                                        <li class="tabli" onclick="changeSelect(this)">Fbx</li>
+                                                        <li class="tabli" onclick="changeSelect(this)">Obj</li>
                                                     </ul>
+                                                </div>
+                                            </div>
+                                            <div class="form-group" style="margin-top: 30px">
+                                                <div class="col-sm-offset-3 col-sm-8">
+                                                    <button class="btn btn-sm btn-primary  m-t-n-xs"  onclick="return save();"> 保&nbsp;&nbsp;&nbsp; 存</button>
                                                 </div>
                                             </div>
                                         </form>
@@ -242,10 +251,62 @@
                                     <div class="ibox-content wizard">
                                         <form class="form-horizontal ">
                                             <div class="form-group">
-                                                <label class="col-sm-1 control-label">Demands：</label>
+                                                <label class="col-sm-1 control-label">语言：</label>
 
                                                 <div class="col-sm-10">
-                                                    <textarea type="text" placeholder="请输入项目名称" class="form-control"></textarea>
+                                                    <ul class="tabUi">
+
+                                                        <li class="tabli" onclick="changeSelect(this)">java</li>
+                                                        <li class="tabli" onclick="changeSelect(this)">c#</li>
+                                                        <li class="tabli" onclick="changeSelect(this)">php</li>
+                                                        <li class="tabli" onclick="changeSelect(this)">c++</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-1 control-label">数据库：</label>
+
+                                                <div class="col-sm-10">
+                                                    <ul class="tabUi">
+
+                                                        <li class="tabli" onclick="changeSelect(this)">oracle</li>
+                                                        <li class="tabli" onclick="changeSelect(this)">mysql</li>
+                                                        <li class="tabli" onclick="changeSelect(this)">SqlServer</li>
+                                                        <li class="tabli" onclick="changeSelect(this)">db2</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-1 control-label">平台：</label>
+
+                                                <div class="col-sm-10">
+                                                    <ul class="tabUi">
+
+                                                        <li class="tabli" onclick="changeSelect(this)">pc</li>
+                                                        <li class="tabli" onclick="changeSelect(this)">andriod</li>
+                                                        <li class="tabli" onclick="changeSelect(this)">ios</li>
+                                                        <li class="tabli" onclick="changeSelect(this)">微信</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="form-group" id="data_5">
+                                                <label class="col-sm-1 control-label">时间：</label>
+                                                <div class="col-sm-4 input-daterange input-group" id="datepicker" style="padding-left: 20px">
+                                                    <input type="text" class="input-sm form-control" name="start" value="2014-11-11" />
+                                                    <span class="input-group-addon">到</span>
+                                                    <input type="text" class="input-sm form-control" name="end" value="2014-11-17" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-1 control-label">描述：</label>
+
+                                                <div class="col-sm-10"  style="padding-left: 20px">
+                                                    <textarea type="text" placeholder="请输入项目需求描述" class="form-control"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="form-group" style="margin-top: 30px">
+                                                <div class="col-sm-offset-3 col-sm-8">
+                                                    <button class="btn btn-sm btn-primary  m-t-n-xs"  onclick="return save();"> 保&nbsp;&nbsp;&nbsp; 存</button>
                                                 </div>
                                             </div>
                                         </form>
