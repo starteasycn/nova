@@ -14,6 +14,9 @@
     <link rel="shortcut icon" href="favicon.ico" tppabs="http://www.zi-han.net/theme/hplus/favicon.ico"> <link href="css/bootstrap.min.css-v=3.3.5.css" tppabs="http://www.zi-han.net/theme/hplus/css/bootstrap.min.css?v=3.3.5" rel="stylesheet">
     <link href="css/font-awesome.min.css-v=4.4.0.css" tppabs="http://www.zi-han.net/theme/hplus/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
 
+    <link href="css/plugins/fullcalendar/fullcalendar.css" tppabs="http://www.zi-han.net/theme/hplus/css/plugins/fullcalendar/fullcalendar.css" rel="stylesheet">
+    <link href="css/plugins/fullcalendar/fullcalendar.print.css" tppabs="http://www.zi-han.net/theme/hplus/css/plugins/fullcalendar/fullcalendar.print.css" rel="stylesheet">
+
     <link href="css/animate.min.css" tppabs="http://www.zi-han.net/theme/hplus/css/animate.min.css" rel="stylesheet">
     <link href="css/style.min.css-v=4.0.0.css" tppabs="http://www.zi-han.net/theme/hplus/css/style.min.css?v=4.0.0" rel="stylesheet"><base target="_blank">
 
@@ -37,6 +40,10 @@
 			padding: 10px;
 			border: 10px solid #f3f3f3;
 			height: 180px;
+		}
+		#tab-4 .form-group{
+			line-height: 50px;
+			font-size: 16px;
 		}
 	</style>
 </head>
@@ -73,7 +80,7 @@
                         <div class="panel-options">
 
                             <ul class="nav nav-tabs">
-                                <li class=""><a data-toggle="tab" href="tabs_panels.html#tab-4" tppabs="http://www.zi-han.net/theme/hplus/tabs_panels.html#tab-4"><span>Schedule</span></a>
+                                <li class="" id="scheduleLi"><a data-toggle="tab" href="tabs_panels.html#tab-4" tppabs="http://www.zi-han.net/theme/hplus/tabs_panels.html#tab-4"><span>Schedule</span></a>
                                 </li>
                                 <li class=""><a data-toggle="tab" href="tabs_panels.html#tab-5" tppabs="http://www.zi-han.net/theme/hplus/tabs_panels.html#tab-5"><span>Messages</span></a>
                                 </li>
@@ -86,9 +93,37 @@
                     <div class="panel-body">
                         <div class="tab-content">
                             <div id="tab-4" class="tab-pane">
-                                <strong>排版与链接</strong>
-
-                                <p>Bootstrap 排版、链接样式设置了基本的全局样式。分别是： 为 body 元素设置 background-color: #fff; 使用 @font-family-base、@font-size-base 和 @line-height-base a变量作为排版的基本参数 为所有链接设置了基本颜色 @link-color ，并且当链接处于 :hover 状态时才添加下划线 这些样式都能在 scaffolding.less 文件中找到对应的源码。</p>
+								<div class="col-lg-12" style="height: 70px;">
+									<h2>日程</h2>
+								</div>
+                                <div class="col-sm-6">
+					                <div class="ibox float-e-margins">
+					                    
+					                    <div class="ibox-content">
+					                        <div id="calendar"></div>
+					                    </div>
+					                </div>
+					            </div>
+					            <div class="col-sm-6" style="margin-top: 50px;">
+						            <div class="row form-group">
+		                                <label class="col-sm-4 control-label">Total time：</label>
+		                                <div class="col-sm-7">
+		                                    5d
+		                                </div>
+		                            </div>
+		                            <div class="row form-group">
+		                                <label class="col-sm-4 control-label">Time left：</label>
+		                                <div class="col-sm-7">
+		                                    <span style="font-size: 30px; font-weight: bold; color: red;">2d:3h:35min</span>
+		                                </div>
+		                            </div>
+		                            <div class="row form-group">
+		                                <label class="col-sm-4 control-label">Project completed：</label>
+		                                <div class="col-sm-7">
+		                                    <span style="font-size: 30px; font-weight: bold;">70%</span>
+		                                </div>
+		                            </div>
+					            </div>
                             </div>
 
                             <div id="tab-5" class="tab-pane">
@@ -134,11 +169,36 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>    
     <script src="js/jquery.min.js-v=2.1.4.js" tppabs="http://www.zi-han.net/theme/hplus/js/jquery.min.js?v=2.1.4"></script>
     <script src="js/bootstrap.min.js-v=3.3.5.js" tppabs="http://www.zi-han.net/theme/hplus/js/bootstrap.min.js?v=3.3.5"></script>
     <script src="js/content.min.js-v=1.0.0.js" tppabs="http://www.zi-han.net/theme/hplus/js/content.min.js?v=1.0.0"></script>
-    <script type="text/javascript" src="../../../tajs.qq.com/stats-sId=9051096.js" tppabs="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
+    <script src="js/jquery-ui.custom.min.js" tppabs="http://www.zi-han.net/theme/hplus/js/jquery-ui.custom.min.js"></script>
+    <script src="js/plugins/iCheck/icheck.min.js" tppabs="http://www.zi-han.net/theme/hplus/js/plugins/iCheck/icheck.min.js"></script>
+    <script src="js/plugins/fullcalendar/fullcalendar.min.js" tppabs="http://www.zi-han.net/theme/hplus/js/plugins/fullcalendar/fullcalendar.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        	
+        	$('#scheduleLi').click(function(){
+        		$("#calendar").empty();
+        		setTimeout(function(){
+        			var b=new Date();
+                	var c=b.getDate();
+                	var a=b.getMonth();
+                	var e=b.getFullYear();
+        			$("#calendar").fullCalendar({
+                		header:{left:"prev,next",center:"title",right:""},
+                		editable:false,
+                		droppable:false,
+                		events:[
+                			{title:"",start:new Date(e,a,17),end:new Date(e,a,25)},
+                		],
+                	});
+        		}, 100);
+        	});
+        });
+        
+    </script>
 </body>
 
 </html>
